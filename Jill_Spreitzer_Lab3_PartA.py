@@ -1,6 +1,6 @@
-# Program for Lab Exercise 2
-# This program converts US measures to
-# metric measures using input from a user
+# Program for Lab Exercise 3
+# This program converts US measures to metric measures using input from a user,
+# and validates that the input provided by the user matches specified parameters
 
 # Declare minimum allowed values for each entry
 MIN_MILES = 0
