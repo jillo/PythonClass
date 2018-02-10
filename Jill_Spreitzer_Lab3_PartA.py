@@ -74,19 +74,19 @@ if miles >= MIN_MILES:
                     print("Isn't this fun?!?")
 
                 else:
-                    print("The inches you entered is invalid and the program will now end. Goodbye!")
+                    print("\nThe inches you entered is invalid and the program will now end. Goodbye!")
 
             else:
-                print("The pounds you entered is invalid and the program will now end. Goodbye!")
+                print("\nThe pounds you entered is invalid and the program will now end. Goodbye!")
 
         else:
-            print("The gallons you entered is invalid and the program will now end. Goodbye!")
+            print("\nThe gallons you entered is invalid and the program will now end. Goodbye!")
             
     else:
-        print("The temperature you entered is invalid and the program will now end. Goodbye!")
+        print("\nThe temperature you entered is invalid and the program will now end. Goodbye!")
         
 else:
-    print("The miles you entered is invalid and the program will now end. Goodbye!")
+    print("\nThe miles you entered is invalid and the program will now end. Goodbye!")
 
 
 
