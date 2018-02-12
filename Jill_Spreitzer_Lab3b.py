@@ -22,6 +22,8 @@ vacation_days = int(input("Enter how many vacation days you took in the last mon
 if vacation_days > 3:
     deduction = True
     deducted_amount = 200
+else:
+    deduction = False
 
 # Get the number of months the salesperson has been with the company
 months_at_company = int(input("Enter the number of months you have been with the company: "))
@@ -48,6 +50,9 @@ else:
     bonus = 0
     commission_rate = 0.00
 
+# Calculate commission amount earned
+commission = sales * commission_rate
+
 # Determine if additional bonus will be paid
 if months_at_company >= 60 and sales > 100000:
     additional_bonus = 1000    
@@ -62,20 +67,23 @@ print("Longevity with company in months", months_at_company)
 # Print the salesperson's base salary
 print("Base Salary", BASE_SALARY)
 
+# Print the salesperson's earned commission rate
+print("Commission Rate", format(commission_rate, '.0%'))
+
 # Print the salesperson's commission earned in dollars
-# TESTING! STILL NEED TO FIX/CHANGE THIS TO THE FORMATTED AMOUNT, NOT THE RATE
-print("Commission Rate", commission_rate)
+# TESTING! STILL NEED TO FIX/CHANGE THIS TO THE FORMATTED AMOUNT
+print("Commission Earned", commission)
 
 # Print the salesperson's bonuses earned in dollars
 # TESTING! STILL NEED TO FIX/CHANGE THIS TO FORMAT IT
-print("Bonus Amount", bonus)
+print("Bonus Amount Earned", bonus)
 
 # Print the additional bonus amount
-print("Additional Longevity Bonus", additional_bonus)
-
+print("Additional Longevity Bonus Earned", additional_bonus)
 
 # Print the salesperson's deductions
-print("Deduction for Vacation Days Taken", deducted_amount)
+if deduction == True:
+    print("Deduction for Vacation Days Taken", deducted_amount)
 
 # Print the salesperson's total gross pay amount
 
