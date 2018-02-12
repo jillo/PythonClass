@@ -13,7 +13,7 @@ first_name = input("Enter your first name: ")
 last_name = input("Enter your last name: ")
 
 # Get the sales amount
-sales = int(input("Enter your monthly sales amount (whole numbers only): "))
+sales = int(input("Enter your monthly sales amount (whole numbers only, no punctuation): "))
 
 # Get the number of vacation days taken in the last month
 vacation_days = int(input("Enter how many vacation days you took in the last month (whole numbers only): "))
@@ -22,61 +22,90 @@ vacation_days = int(input("Enter how many vacation days you took in the last mon
 if vacation_days > 3:
     deduction = True
     deducted_amount = 200
+else:
+    deduction = False
+    deducted_amount = 0
 
-# Get the number of months the salesperson has been with the company
-months_at_company = int(input("Enter the number of months you have been with the company: "))
+# Get the number of months the salesperson has been with the company 
+months_at_company = int(input("Enter the number of months you have been with the company: ")) 
+
+# Determine if salesperson is elible for the bonus
+if months_at_company >= 3:
+    bonus = True
+else:
+    bonus = False
 
 # Determine the commission and bonus levels based on the sales amount and longevity with company
-
 if sales > 1000000:
-    bonus = 10000
     commission_rate = 0.35
+    if bonus == True:
+        bonus_amount = 10000
+    else:
+        bonus_amount = 0
 
 elif sales >= 500001:
-    bonus = 5000
     commission_rate = 0.28
+    if bonus == True:
+        bonus_amount = 5000
+    else:
+        bonus_amount = 0    
 
 elif sales >= 100001:
-    bonus = 1000
     commission_rate = 0.15
+    if bonus == True:
+        bonus_amount = 1000
+    else:
+        bonus_amount = 0
 
-elif sales >= 10000:
-    bonus = 0
+elif sales >= 10000:    # Sales of $100,000 or under do not get a bonus 
     commission_rate = 0.02
+    bonus_amount = 0
 
 else:
-    bonus = 0
     commission_rate = 0.00
+    bonus_amount = 0
+
+# Calculate commission amount earned
+commission = sales * commission_rate
 
 # Determine if additional bonus will be paid
 if months_at_company >= 60 and sales > 100000:
-    additional_bonus = 1000    
+    additional_bonus = True
+    additional_bonus_amount = 1000
+else:
+    additional_bonus = False
+    additional_bonus_amount = 0
+
+# Calculate total gross pay
+total_gross_pay = BASE_SALARY + commission + bonus_amount + additional_bonus_amount - deducted_amount
 
 # Print the paystub
 # Print the salesperson's first and last name
-print("Name:", first_name, last_name)
+print("\n\nName of Salesperson\t\t\t\t", first_name,  " ", last_name, sep='')
 
 # Print the salesperson's longevity with the company
-print("Longevity with company in months", months_at_company)
+print("\nLongevity with company in months\t\t", months_at_company, sep='')
 
 # Print the salesperson's base salary
-print("Base Salary", BASE_SALARY)
+print("\nBase Salary\t\t\t\t\t$", format(BASE_SALARY, ',.2f'),sep='')
+
+# Print the salesperson's earned commission rate
+print("\nCommission Rate\t\t\t\t\t", format(commission_rate, '.0%'),sep='')
 
 # Print the salesperson's commission earned in dollars
-# TESTING! STILL NEED TO FIX/CHANGE THIS TO THE FORMATTED AMOUNT, NOT THE RATE
-print("Commission Rate", commission_rate)
+print("\nCommission Earned\t\t\t\t$", format(commission, ',.2f'),sep='')
 
-# Print the salesperson's bonuses earned in dollars
-# TESTING! STILL NEED TO FIX/CHANGE THIS TO FORMAT IT
-print("Bonus Amount", bonus)
+# Print the salesperson's bonus amount earned in dollars
+print("\nBonus Amount Earned\t\t\t\t$", format(bonus_amount, ',.2f'),sep='')
 
 # Print the additional bonus amount
-print("Additional Longevity Bonus", additional_bonus)
-
+if additional_bonus == True:
+    print("\nAdditional Longevity Bonus Earned\t\t$", format(additional_bonus_amount, ',.2f'),sep='')
 
 # Print the salesperson's deductions
-print("Deduction for Vacation Days Taken", deducted_amount)
+if deduction == True:
+    print("\nDeduction for Vacation Days Taken\t\t$", format(deducted_amount, ',.2f'),sep='')
 
 # Print the salesperson's total gross pay amount
-
+print("\nTotal Gross Pay\t\t\t\t\t$", format(total_gross_pay, ',.2f'),sep='')
 
