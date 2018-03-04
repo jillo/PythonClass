@@ -63,9 +63,15 @@ def main():
                 continue_program = False
 
         else:
-            # Call the function that converts miles to kilometers, pass in the "miles" value
+            # Call the function that converts miles to kilometers, pass in the "miles" value, and
+            # get the returned value
             print("\n", name, end=", \n")
-            MilesToKm(miles)
+            kilometers = MilesToKm(miles)
+
+            # can i call the function within the print statement?
+
+            # Print the kilometers
+            print(miles, "miles is equal to", kilometers, "kilometers.")
 
             # Set get_miles_input to false so that the while loop will exit and the
             # program will continue
@@ -110,9 +116,13 @@ def main():
 
             else:
                 # Call the function that converts Fahrenheit temperature to Celsius, pass in the
-                # "fahrenheitTemp" value
+                # "fahrenheitTemp" value, and get the returned value
                 print("\n", name, end=", \n")
-                FahToCel(fahrenheitTemp)
+                celsius = FahToCel(fahrenheitTemp)
+
+                # Print the Celsius temperature
+                print(fahrenheitTemp, "degrees Fahrenheit is equal to",
+                      celsius, "degrees Celsius.")
 
                 # Set get_temperature_input to false so that the while loop will exit and the
                 # program will continue
@@ -156,9 +166,13 @@ def main():
                     continue_program = False
 
             else:
-                # Call the function that converts gallons to liters, pass in the "gallons" value
+                # Call the function that converts gallons to liters, pass in the "gallons" value,
+                # and get the returned value
                 print("\n", name, end=", \n")
-                GalToLit(gallons)
+                liters = GalToLit(gallons)
+
+                # Print the liters
+                print(gallons, "gallons is equal to", liters, "liters.")
 
                 # Set get_gallons_input to false so that the while loop will exit and the
                 # program will continue
@@ -200,9 +214,13 @@ def main():
                     continue_program = False
 
             else:
-                # Call the function that converts pounds to kilograms, pass in the "pounds" value
+                # Call the function that converts pounds to kilograms, pass in the "pounds" value,
+                # and get the returned value
                 print("\n", name, end=", \n")
-                PoundsToKg(pounds)
+                kilograms = PoundsToKg(pounds)
+
+                # Print the kilograms
+                print(pounds, "pounds is equal to", kilograms, "kilograms.")
 
                 # Set get_pounds_input to false so that the while loop will exit and the
                 # program will continue
@@ -246,7 +264,10 @@ def main():
             else:
                 # Call the function that converts inches to centimeters, pass in "inches" value
                 print("\n", name, end=", \n")
-                InchesToCm(inches)
+                centimeters = InchesToCm(inches)
+
+                # Print the centimeters
+                print(inches, "inches is equal to", centimeters, "centimeters.")
 
                 # Set get_inches_input to false so that the while loop will exit and the
                 # program will continue
@@ -262,31 +283,27 @@ def main():
 def MilesToKm(miles):
     # Convert the requested miles to kilometers and print the converted results
     milesToKm = miles * 1.6
-    print(miles, "miles is equal to", milesToKm, "kilometers.")
-
+    return milesToKm
 
 def FahToCel(fahrenheitTemp):
     # Convert the requested Fahrenheit temperature to Celsius and print the converted results
     fahrenheitToCelsius = (fahrenheitTemp - 32) * 5 / 9
-    print(fahrenheitTemp, "degrees Fahrenheit is equal to",
-          fahrenheitToCelsius, "degrees Celsius.")
+    return fahrenheitToCelsius
 
 def GalToLit(gallons):
     # Convert the requested gallons to liters and print the converted results
     gallonsToLiters = gallons * 3.9
-    print(gallons, "gallons is equal to", gallonsToLiters, "liters.")
-
+    return gallonsToLiters
 
 def PoundsToKg(pounds):
     # Convert the requested pounds to kilograms and print the converted results
     poundsToKilograms = pounds * .45
-    print(pounds, "pounds is equal to", poundsToKilograms, "kilograms.")
-
+    return poundsToKilograms
 
 def InchesToCm(inches):
     # Convert the requested inches to centimeters and print the converted results
     inchesToCentimeters = inches * 2.54
-    print(inches, "inches is equal to", inchesToCentimeters, "centimeters.")
+    return inchesToCentimeters
 
 
 # Call the main function
