@@ -55,7 +55,7 @@ def start_game():
                 else:
                     guess = int(input('Too low, guess again! '))
 
-            if guess > number:
+            elif guess > number:
                 if guess <= number + 10:
                     guess = int(input("You're getting warm but are a little too high.  Guess again! "))
                 else:
@@ -68,7 +68,7 @@ def start_game():
               "It only took you", guess_counter, "tries to guess the number.")
 
         # Ask if the user would like to play again
-        keep_going = input('Would you like to play again? (Enter "y" or "Y" for yes):\n')
+        keep_going = input('\nWould you like to play again? (Enter "y" or "Y" for yes):\n')
 
 
 # Call the main function
