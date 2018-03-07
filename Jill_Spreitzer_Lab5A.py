@@ -68,8 +68,6 @@ def main():
             print("\n", name, end=", \n")
             kilometers = MilesToKm(miles)
 
-            # can i call the function within the print statement?
-
             # Print the kilometers
             print(miles, "miles is equal to", kilometers, "kilometers.")
 
