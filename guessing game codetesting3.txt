@@ -1,0 +1,67 @@
+Guessing Game Program
+
+# This program generates a random number and gives the user as many 
+# tries as it takes to guess the number (and tracks this number), giving 
+# the user feedback on their guesses to help them get closer and 
+# eventually guess the number.
+
+
+psuedocode:
+while true
+
+	Ask the player to guess the number using whole numbers only
+	number = (call the random number function)
+
+	
+	
+	guess = int(input("guess the number"))
+
+	while guess != number:
+
+		start the counter 
+
+		if guess < number
+			if guess >= number-10
+				print getting warm but still low
+			else 
+				print("too low!")
+
+		else 
+			if guess <= number+10
+				print getting warm but still high
+			else 
+				print("too high!")
+				
+		guess = int(input("guess again!"))
+			
+
+	if guess = number
+	print congrats statement with # of tries in the statement
+	ask if they want to play again (y or n)
+	if answer == y 
+	
+
+
+
+
+
+
+
+
+
+Output/print statements:
+
+I'm thinking of a number between 1 and 1000.  Guess what 
+number I am thinking of!
+
+Too high!
+
+Too low!
+
+Getting warm but still high
+
+Getting warm but still low
+
+Congratulations!  It only took you X tries to guess the number!
+
+Would you like to play again?

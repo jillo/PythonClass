@@ -1,0 +1,110 @@
+# Ask the user how many miles are to be converted to kilometers
+# (This is the priming read)
+miles = float(input("please tell me how many miles you want converted to kilometers, using positive numbers only: "))
+
+# Check that the miles data entered is valid, if not, give the user 3 tries and then stop program
+if miles < MIN_MILES:
+
+    #this needs to be a while loop instead of a for loop
+    while attempt_counter < MAX_ATTEMPTS
+
+        # Increase the attempt_counter accumulator by 1
+        attempt_counter += 1
+
+        if attempt_counter < MAX_ATTEMPTS:
+            print("\nThe miles you entered is invalid, please try again; you have",
+                  MAX_ATTEMPTS - attempt_counter, "more tries/try allowed.")
+
+            miles = float(input("Using positive numbers only, please tell me how many miles you want converted to "+
+                                "kilometers: "))
+            
+        else:
+            print("\nYou have reached your maximum number of tries and",
+                  "the program will now end.")
+
+else:
+    # Reset the attempt counter to 0
+    attempt_counter = 0
+
+    # Convert the requested miles to kilometers and print the converted results, continue program
+    milesToKm = miles * 1.6
+    print("\n", name, end=", \n")
+    print(miles, "miles is equal to", milesToKm, "kilometers.\n")
+
+    # Ask the user what Fahrenheit temperature is to be converted to Celcius
+    fahrenheitTemp = float(input("Please tell me what Fahrenheit temperature (up to 1000), you would like converted to Celcius: "))
+
+
+#if the counter is 0, move on
+
+
+
+OMG THIS IS SO FUCKING CONFUSING
+WHICH COMBINATION OF WHILE/FOR OR IF/ELSE SHOULD THIS USE????
+
+
+get input
+	if input is invalid
+		add 1 to the counter (limit is x)
+		tell em they have x-1 more tries
+		
+		#the for loop won't work here because it has to do something between each loop
+		#unless the for loop could just be for the counter?
+		
+		while tries < x
+			add 1 to the accumulator
+			message to give input again
+
+
+		
+		if counter has reached x
+			end program  #(but how?!?!  cuz i'm inside a while loop! need a sentinel)
+			
+		
+		else
+			get input again
+	
+	else
+		do conversion and ask for the next item
+		
+		
+	
+	
+	
+while another to input
+	get input
+		if valid
+			do conversion
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+# (This is the priming read)
+miles = float(input("please tell me how many miles you want converted to kilometers, using positive numbers only: "))
+
+# Check that the miles data entered is valid, if not, give the user 3 tries and then stop program
+while miles < MIN_MILES:
+
+    # Increase the attempt_counter accumulator by 1
+    attempt_counter += 1
+
+    for attempt_counter in range(MAX_ATTEMPTS):
+        print("\nThe miles you entered is invalid, please try again; you have",
+              MAX_ATTEMPTS - attempt_counter, "more tries/try allowed.")
+        
+    #Sentinel to exit while loop
+    miles = float(input("Using positive numbers only, please tell me how many miles you want converted to "+
+                            "kilometers: "))
+   

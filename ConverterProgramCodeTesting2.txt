@@ -1,0 +1,36 @@
+
+MAX_TRIES = 3
+
+
+get input for miles
+if < 0
+	
+	count = 2 	# reduce count by 1 each time (should this count start at 3 or 2? if 3, then the print statement will need to say count-1)
+	print "the miles you entered is invalid, you have _count_ more tries to enter a valid value, then this program will end"
+	for count in range(MAX_TRIES, 0, -1):
+	
+
+elif
+
+
+
+if miles < MIN_MILES:
+    for counter in range(MAX_TRIES, 0, -1):
+        print("\nThe miles you entered is invalid")
+        print('You have' counter - 1 'more tries/try to get it right')
+        if counter:
+            print('The program will now end. Goodbye!')
+
+
+
+
+
+
+			
+			
+			
+			
+
+#
+#			
+# for attempt_counter in range(MAX_ATTEMPTS):

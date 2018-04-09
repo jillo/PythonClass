@@ -6,6 +6,8 @@
 # The user has 3 tries per measurement to enter a valid value,
 # after which the program will end.
 
+import converter
+
 
 def main():
 
@@ -66,7 +68,7 @@ def main():
             # Call the function that converts miles to kilometers, pass in the "miles" value, and
             # get the returned value
             print("\n", name, end=", \n")
-            kilometers = MilesToKm(miles)
+            kilometers = converter.MilesToKm(miles)
 
             # Print the kilometers
             print(miles, "miles is equal to", kilometers, "kilometers.")
@@ -116,7 +118,7 @@ def main():
                 # Call the function that converts Fahrenheit temperature to Celsius, pass in the
                 # "fahrenheitTemp" value, and get the returned value
                 print("\n", name, end=", \n")
-                celsius = FahToCel(fahrenheitTemp)
+                celsius = converter.FahToCel(fahrenheitTemp)
 
                 # Print the Celsius temperature
                 print(fahrenheitTemp, "degrees Fahrenheit is equal to",
@@ -167,7 +169,7 @@ def main():
                 # Call the function that converts gallons to liters, pass in the "gallons" value,
                 # and get the returned value
                 print("\n", name, end=", \n")
-                liters = GalToLit(gallons)
+                liters = converter.GalToLit(gallons)
 
                 # Print the liters
                 print(gallons, "gallons is equal to", liters, "liters.")
@@ -215,7 +217,7 @@ def main():
                 # Call the function that converts pounds to kilograms, pass in the "pounds" value,
                 # and get the returned value
                 print("\n", name, end=", \n")
-                kilograms = PoundsToKg(pounds)
+                kilograms = converter.PoundsToKg(pounds)
 
                 # Print the kilograms
                 print(pounds, "pounds is equal to", kilograms, "kilograms.")
@@ -262,7 +264,7 @@ def main():
             else:
                 # Call the function that converts inches to centimeters, pass in "inches" value
                 print("\n", name, end=", \n")
-                centimeters = InchesToCm(inches)
+                centimeters = converter.InchesToCm(inches)
 
                 # Print the centimeters
                 print(inches, "inches is equal to", centimeters, "centimeters.")
@@ -278,30 +280,7 @@ def main():
 # This is the end of the main function and
 # begins the other function definitions
 
-def MilesToKm(miles):
-    # Convert the requested miles to kilometers and print the converted results
-    milesToKm = miles * 1.6
-    return milesToKm
 
-def FahToCel(fahrenheitTemp):
-    # Convert the requested Fahrenheit temperature to Celsius and print the converted results
-    fahrenheitToCelsius = (fahrenheitTemp - 32) * 5 / 9
-    return fahrenheitToCelsius
-
-def GalToLit(gallons):
-    # Convert the requested gallons to liters and print the converted results
-    gallonsToLiters = gallons * 3.9
-    return gallonsToLiters
-
-def PoundsToKg(pounds):
-    # Convert the requested pounds to kilograms and print the converted results
-    poundsToKilograms = pounds * .45
-    return poundsToKilograms
-
-def InchesToCm(inches):
-    # Convert the requested inches to centimeters and print the converted results
-    inchesToCentimeters = inches * 2.54
-    return inchesToCentimeters
 
 
 # Call the main function

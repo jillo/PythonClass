@@ -1,0 +1,29 @@
+        # Increase the guess_counter by 1
+        guess_counter += 1
+		
+		
+		
+		
+		
+		
+		        while guess != number:
+
+            if guess < number:
+                if guess >= number - 10:
+                    guess = int(input("You're getting warm but are a little too low.  Guess again! "))
+                    guess_counter += 1
+
+                else:
+                    guess = int(input('Too low, guess again! '))
+                    guess_counter += 1
+
+            if guess > number:
+                if guess <= number + 10:
+                    guess_counter += 1
+                    guess = int(input("You're getting warm but are a little too high.  Guess again! "))
+                else:
+                    guess = int(input('Too high, guess again! '))
+                    guess_counter += 1
+
+            # troubleshooting
+            print("The guess counter is at:", guess_counter) # Why isn't this printing?
